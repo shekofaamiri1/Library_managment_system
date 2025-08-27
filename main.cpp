@@ -24,7 +24,19 @@ Person::Person(string n, int i) {
     setName(n);
     setId(i);
 }
+void Person::setName(string n) {
+    if (n.length() >= 3)
+        name = n;
+    else
+        cout << "Error! Name must be at least 3 characters." << endl;
+}
 
+void Person::setId(int i) {
+    if (i >= 0)
+        id = i;
+    else
+        cout << "Error! ID must be non-negative." << endl;
+}
 int main() {
     return 0;
 }
