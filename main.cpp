@@ -37,6 +37,13 @@ void Person::setId(int i) {
     else
         cout << "Error! ID must be non-negative." << endl;
 }
+string Person::getName() const {
+    return name;
+}
+
+int Person::getId() const {
+    return id;
+}
 int main() {
     return 0;
 }
