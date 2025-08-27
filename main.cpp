@@ -15,6 +15,16 @@ private:
     string getName() const;
     int getId() const;
 };
+Person::Person() {
+    name = "";
+    id = 0;
+}
+
+Person::Person(string n, int i) {
+    setName(n);
+    setId(i);
+}
+
 int main() {
     return 0;
 }
