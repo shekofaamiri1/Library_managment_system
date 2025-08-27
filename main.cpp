@@ -44,6 +44,10 @@ string Person::getName() const {
 int Person::getId() const {
     return id;
 }
+void Person::display() const {
+    cout << "Name: " << name << endl;
+    cout << "ID: " << id << endl;
+}
 int main() {
     return 0;
 }
