@@ -60,7 +60,9 @@ public:
     void display() const override; 
     const vector<int>& getBorrowedItemId() const;
 };
+Member::Member() = default;
 
+Member::Member(string n, int i) : Person(n, i) {}
 int main() {
     return 0;
 }
