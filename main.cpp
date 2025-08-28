@@ -66,6 +66,9 @@ Member::Member(string n, int i) : Person(n, i) {}
 void Member::borrowItem(int itemId) {
     borrowedItemId.push_back(itemId);
 }
+void Member::returnItem(int itemId) {
+    borrowedItemId.erase(remove(borrowedItemId.begin(), borrowedItemId.end(), itemId), borrowedItemId.end());
+}
 int main() {
     return 0;
 }
