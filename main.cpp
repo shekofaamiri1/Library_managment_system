@@ -69,6 +69,19 @@ void Member::borrowItem(int itemId) {
 void Member::returnItem(int itemId) {
     borrowedItemId.erase(remove(borrowedItemId.begin(), borrowedItemId.end(), itemId), borrowedItemId.end());
 }
+void Member::display() const {
+    Person::display();
+    cout << "Borrowed items: ";
+    if (borrowedItemId.empty()) {
+        cout << "None";
+    } else {
+        for (int id : borrowedItemId) {
+            cout << id << " ";
+        }
+    }
+    cout << endl;
+}
+
 int main() {
     return 0;
 }
