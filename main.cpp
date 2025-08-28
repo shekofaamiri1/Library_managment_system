@@ -81,7 +81,9 @@ void Member::display() const {
     }
     cout << endl;
 }
-
+const vector<int>& Member::getBorrowedItemId() const {
+    return borrowedItemId;
+}
 int main() {
     return 0;
 }
