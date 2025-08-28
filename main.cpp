@@ -63,6 +63,9 @@ public:
 Member::Member() = default;
 
 Member::Member(string n, int i) : Person(n, i) {}
+void Member::borrowItem(int itemId) {
+    borrowedItemId.push_back(itemId);
+}
 int main() {
     return 0;
 }
