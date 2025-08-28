@@ -52,6 +52,14 @@ void Person::display() const {
 class Member : public Person {
 private:
     vector<int> borrowedItemId;
+public:
+    Member();
+    Member(string, int);
+    void borrowItem(int);
+    void returnItem(int);
+    void display() const override; 
+    const vector<int>& getBorrowedItemId() const;
+};
 
 int main() {
     return 0;
