@@ -48,6 +48,11 @@ void Person::display() const {
     cout << "Name: " << name << endl;
     cout << "ID: " << id << endl;
 }
+// کلاس فرزند: Member
+class Member : public Person {
+private:
+    vector<int> borrowedItemId;
+
 int main() {
     return 0;
 }
