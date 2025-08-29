@@ -114,6 +114,13 @@ class Item {
         setItemID(id);
         setIsAvailable(avail);
     }
+    void Item::setTitle(string t) {
+        if (t.length() >= 2)
+            title = t;
+        else
+            cout << "Error! must be at least 2 characters." << endl;
+    }
+    
 int main() {
     return 0;
 }
