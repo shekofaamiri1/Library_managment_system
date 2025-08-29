@@ -120,7 +120,12 @@ class Item {
         else
             cout << "Error! must be at least 2 characters." << endl;
     }
-    
+    void Item::setItemID(int id) {
+        if (id >= 0)
+            itemID = id;
+        else
+            cout << "Error! ID must be Positive." << endl;
+    }
 int main() {
     return 0;
 }
