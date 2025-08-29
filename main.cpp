@@ -129,7 +129,17 @@ class Item {
     void Item::setIsAvailable(bool avail) {
         isAvailable = avail;
     }
+    string Item::getTitle() const {
+        return title;
+    }
     
+    int Item::getItemID() const {
+        return itemID;
+    }
+    
+    bool Item::getIsAvailable() const {
+        return isAvailable;
+    }
 int main() {
     return 0;
 }
