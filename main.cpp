@@ -90,6 +90,21 @@ class Item {
         string title;
         int itemID;
         bool isAvailable;
+        public:
+        Item();
+        Item(string, int, bool);
+        
+        void setTitle(string);
+        void setItemID(int);
+        void setIsAvailable(bool);
+        
+        string getTitle() const;
+        int getItemID() const;
+        bool getIsAvailable() const;
+    
+        virtual void displayInfo() const;
+    };
+    
 int main() {
     return 0;
 }
