@@ -104,7 +104,11 @@ class Item {
     
         virtual void displayInfo() const;
     };
-    
+     Item::Item() {
+        title = "";
+        itemID = 0;
+        isAvailable = true;
+    }
 int main() {
     return 0;
 }
