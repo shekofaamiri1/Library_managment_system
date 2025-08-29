@@ -109,6 +109,11 @@ class Item {
         itemID = 0;
         isAvailable = true;
     }
+    Item::Item(string t, int id, bool avail) {
+        setTitle(t);
+        setItemID(id);
+        setIsAvailable(avail);
+    }
 int main() {
     return 0;
 }
