@@ -140,6 +140,11 @@ class Item {
     bool Item::getIsAvailable() const {
         return isAvailable;
     }
+    void Item::displayInfo() const {
+        cout << "Title: " << title << endl;
+        cout << "Item ID: " << itemID << endl;
+        cout << "Availability: " << (isAvailable ? "Available" : "Borrowed") << endl;
+    }
 int main() {
     return 0;
 }
