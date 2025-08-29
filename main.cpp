@@ -126,6 +126,10 @@ class Item {
         else
             cout << "Error! ID must be Positive." << endl;
     }
+    void Item::setIsAvailable(bool avail) {
+        isAvailable = avail;
+    }
+    
 int main() {
     return 0;
 }
