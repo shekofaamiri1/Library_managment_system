@@ -84,6 +84,12 @@ void Member::display() const {
 const vector<int>& Member::getBorrowedItemId() const {
     return borrowedItemId;
 }
+// class item section ---------------------------
+class Item {
+    protected:
+        string title;
+        int itemID;
+        bool isAvailable;
 int main() {
     return 0;
 }
