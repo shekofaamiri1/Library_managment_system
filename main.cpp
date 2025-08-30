@@ -189,6 +189,11 @@ class Book : public Item {
     string Book::getISBN() const {
         return ISBN;
     }
+    void Book::displayInfo() const {
+        Item::displayInfo();
+        cout << "Author: " << author << endl;
+        cout << "ISBN: " << ISBN << endl;
+    }
     
 int main() {
     return 0;
