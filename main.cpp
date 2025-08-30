@@ -145,6 +145,11 @@ class Item {
         cout << "Item ID: " << itemID << endl;
         cout << "Availability: " << (isAvailable ? "Available" : "Borrowed") << endl;
     }
+    //class Book section ----------------------
+class Book : public Item {
+    private:
+        string author;
+        string ISBN;
 int main() {
     return 0;
 }
