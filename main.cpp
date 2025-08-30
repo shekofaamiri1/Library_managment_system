@@ -150,6 +150,18 @@ class Book : public Item {
     private:
         string author;
         string ISBN;
+        public:
+        Book();
+        Book(string, int, bool, string, string);
+        
+        void setAuthor(string);
+        void setISBN(string);
+    
+        string getAuthor() const;
+        string getISBN() const;
+    
+        void displayInfo() const override;
+    };
 int main() {
     return 0;
 }
