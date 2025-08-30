@@ -166,6 +166,11 @@ class Book : public Item {
         author = "";
         ISBN = "";
     }
+    Book::Book(string t, int id, bool avail, string a, string isbn) : Item(t, id, avail) {
+        setAuthor(a);
+        setISBN(isbn);
+    }
+    
 int main() {
     return 0;
 }
