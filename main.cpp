@@ -170,6 +170,12 @@ class Book : public Item {
         setAuthor(a);
         setISBN(isbn);
     }
+    void Book::setAuthor(string a) {
+        if (a.length() >= 3)
+            author = a;
+        else
+            cout << "Error! must be at least 3 characters." << endl;
+    }
     
 int main() {
     return 0;
