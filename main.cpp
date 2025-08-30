@@ -182,6 +182,13 @@ class Book : public Item {
         else
             cout << "Error! must be 13 characters." << endl;
     }
+    string Book::getAuthor() const {
+        return author;
+    }
+    
+    string Book::getISBN() const {
+        return ISBN;
+    }
     
 int main() {
     return 0;
