@@ -176,6 +176,12 @@ class Book : public Item {
         else
             cout << "Error! must be at least 3 characters." << endl;
     }
+    void Book::setISBN(string isbn) {
+        if (isbn.length() == 13)
+            ISBN = isbn;
+        else
+            cout << "Error! must be 13 characters." << endl;
+    }
     
 int main() {
     return 0;
