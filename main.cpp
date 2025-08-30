@@ -162,6 +162,10 @@ class Book : public Item {
     
         void displayInfo() const override;
     };
+    Book::Book() : Item() {
+        author = "";
+        ISBN = "";
+    }
 int main() {
     return 0;
 }
