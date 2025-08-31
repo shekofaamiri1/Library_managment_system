@@ -219,6 +219,12 @@ class Magazine : public Item {
         setIssueNumber(issue);
         setPublisher(pub);
     }
+     void Magazine::setIssueNumber(int issue) {
+        if (issue > 0)
+            issueNumber = issue;
+        else
+            cout << "Error! must be positive." << endl;
+    }
 int main() {
     return 0;
 }
