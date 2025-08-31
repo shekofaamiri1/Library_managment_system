@@ -232,6 +232,13 @@ class Magazine : public Item {
         else
             cout << "Error! must be at least 2 characters." << endl;
     }
+    int Magazine::getIssueNumber() const {
+        return issueNumber;
+    }
+    
+    string Magazine::getPublisher() const {
+        return publisher;
+    }
 int main() {
     return 0;
 }
