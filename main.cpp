@@ -194,7 +194,11 @@ class Book : public Item {
         cout << "Author: " << author << endl;
         cout << "ISBN: " << ISBN << endl;
     }
-    
+    // class magazin section -----------------
+class Magazine : public Item {
+    private:
+        int issueNumber;
+        string publisher;
 int main() {
     return 0;
 }
