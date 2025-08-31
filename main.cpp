@@ -215,7 +215,10 @@ class Magazine : public Item {
         issueNumber = 0;
         publisher = "";
     }
-    
+    Magazine::Magazine(string t, int id, bool avail, int issue, string pub) : Item(t, id, avail) {
+        setIssueNumber(issue);
+        setPublisher(pub);
+    }
 int main() {
     return 0;
 }
