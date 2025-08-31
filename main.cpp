@@ -239,6 +239,11 @@ class Magazine : public Item {
     string Magazine::getPublisher() const {
         return publisher;
     }
+    void Magazine::displayInfo() const {
+        Item::displayInfo();
+        cout << "Issue Number: " << issueNumber << endl;
+        cout << "Publisher: " << publisher << endl;
+    }
 int main() {
     return 0;
 }
