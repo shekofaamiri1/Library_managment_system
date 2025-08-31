@@ -199,6 +199,18 @@ class Magazine : public Item {
     private:
         int issueNumber;
         string publisher;
+        public:
+        Magazine();
+        Magazine(string, int, bool, int, string);
+    
+        void setIssueNumber(int);
+        void setPublisher(string);
+    
+        int getIssueNumber() const;
+        string getPublisher() const;
+    
+        void displayInfo() const override;
+    };
 int main() {
     return 0;
 }
