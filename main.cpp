@@ -211,6 +211,11 @@ class Magazine : public Item {
     
         void displayInfo() const override;
     };
+    Magazine::Magazine() : Item() {
+        issueNumber = 0;
+        publisher = "";
+    }
+    
 int main() {
     return 0;
 }
