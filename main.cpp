@@ -225,6 +225,13 @@ class Magazine : public Item {
         else
             cout << "Error! must be positive." << endl;
     }
+    
+     void Magazine::setPublisher(string pub) {
+        if (pub.length() >= 2)
+            publisher = pub;
+        else
+            cout << "Error! must be at least 2 characters." << endl;
+    }
 int main() {
     return 0;
 }
