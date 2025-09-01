@@ -275,6 +275,12 @@ class DVD : public Item {
         else
             cout << "Error! must be at least 3 characters." << endl;
     }
+    void DVD::setDuration(float dur) {
+        if (dur > 0)
+            duration = dur;
+        else
+            cout << "Error! must be greater than 0." << endl;
+    }
 int main() {
     return 0;
 }
