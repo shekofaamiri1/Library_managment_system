@@ -249,7 +249,18 @@ class DVD : public Item {
     private:
         string director;
         float duration;  // in minutes
+    public:
+        DVD();
+        DVD(string, int, bool, string, float);
     
+        void setDirector(string);
+        void setDuration(float);
+    
+        string getDirector() const;
+        float getDuration() const;
+    
+        void displayInfo() const override;
+    };
 int main() {
     return 0;
 }
