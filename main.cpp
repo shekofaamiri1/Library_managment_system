@@ -244,6 +244,12 @@ class Magazine : public Item {
         cout << "Issue Number: " << issueNumber << endl;
         cout << "Publisher: " << publisher << endl;
     }
+    //class DVD section --------------------------------
+class DVD : public Item {
+    private:
+        string director;
+        float duration;  // in minutes
+    
 int main() {
     return 0;
 }
