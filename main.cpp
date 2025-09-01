@@ -261,6 +261,11 @@ class DVD : public Item {
     
         void displayInfo() const override;
     };
+    DVD::DVD() : Item() {
+        director = "";
+        duration = 0.0;
+    }
+    
 int main() {
     return 0;
 }
