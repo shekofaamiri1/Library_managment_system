@@ -265,7 +265,10 @@ class DVD : public Item {
         director = "";
         duration = 0.0;
     }
-    
+    DVD::DVD(string t, int id, bool avail, string dir, float dur) : Item(t, id, avail) {
+        setDirector(dir);
+        setDuration(dur);
+    }
 int main() {
     return 0;
 }
