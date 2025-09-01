@@ -281,6 +281,13 @@ class DVD : public Item {
         else
             cout << "Error! must be greater than 0." << endl;
     }
+    string DVD::getDirector() const {
+        return director;
+    }
+    
+    float DVD::getDuration() const {
+        return duration;
+    }
 int main() {
     return 0;
 }
