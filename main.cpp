@@ -269,6 +269,12 @@ class DVD : public Item {
         setDirector(dir);
         setDuration(dur);
     }
+    void DVD::setDirector(string dir) {
+        if (dir.length() >= 3)
+            director = dir;
+        else
+            cout << "Error! must be at least 3 characters." << endl;
+    }
 int main() {
     return 0;
 }
