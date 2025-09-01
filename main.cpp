@@ -288,6 +288,11 @@ class DVD : public Item {
     float DVD::getDuration() const {
         return duration;
     }
+    void DVD::displayInfo() const {
+        Item::displayInfo();
+        cout << "Director: " << director << endl;
+        cout << "Duration: " << duration << " minutes" << endl;
+    }
 int main() {
     return 0;
 }
