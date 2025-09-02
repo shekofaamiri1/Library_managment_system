@@ -347,6 +347,12 @@ class Transaction {
         else
             cout << "Error! Item ID must be non-negative." << endl;
     }
+    void Transaction::setBorrowDate(string date) {
+        if (date.length() >= 6)
+            borrowDate = date;
+        else
+            cout << "Error! Invalid borrow date format." << endl;
+    }
 int main() {
     return 0;
 }
