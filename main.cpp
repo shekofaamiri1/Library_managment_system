@@ -376,6 +376,14 @@ class Transaction {
     string Transaction::getReturnDate() const {
         return returnDate;
     }
+     bool Transaction::getIsReturned() const {
+        return isReturned;
+    }
+    
+    void Transaction::markReturned(string rDate) {
+        setReturnDate(rDate);
+        setIsReturned(true);
+    }
 int main() {
     return 0;
 }
