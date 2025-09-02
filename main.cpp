@@ -328,6 +328,13 @@ class Transaction {
         returnDate = "";
         isReturned = false;
     }
+     Transaction::Transaction(int mID, int iID, string bDate) {
+        setMemberID(mID);
+        setItemID(iID);
+        setBorrowDate(bDate);
+        isReturned = false;
+        returnDate = "";
+    }
 int main() {
     return 0;
 }
