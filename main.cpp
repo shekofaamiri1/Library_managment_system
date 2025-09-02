@@ -301,6 +301,27 @@ class Transaction {
         string borrowDate;
         string returnDate;
         bool isReturned;
+        public:
+        Transaction();
+        Transaction(int, int, string);
+    
+        void setMemberID(int);
+        void setItemID(int);
+        void setBorrowDate(string);
+        void setReturnDate(string);
+        void setIsReturned(bool);
+    
+        int getMemberID() const;
+        int getItemID() const;
+        string getBorrowDate() const;
+        string getReturnDate() const;
+        bool getIsReturned() const;
+        
+    
+        void markReturned(string returnDate);
+        void display() const;
+    };
+    
 int main() {
     return 0;
 }
