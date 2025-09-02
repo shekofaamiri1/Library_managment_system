@@ -321,7 +321,13 @@ class Transaction {
         void markReturned(string returnDate);
         void display() const;
     };
-    
+    Transaction::Transaction() {
+        memberID = 0;
+        itemID = 0;
+        borrowDate = "";
+        returnDate = "";
+        isReturned = false;
+    }
 int main() {
     return 0;
 }
