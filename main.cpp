@@ -341,6 +341,12 @@ class Transaction {
         else
             cout << "Error! must be non-negative." << endl;
     }
+    void Transaction::setItemID(int id) {
+        if (id >= 0)
+            itemID = id;
+        else
+            cout << "Error! Item ID must be non-negative." << endl;
+    }
 int main() {
     return 0;
 }
