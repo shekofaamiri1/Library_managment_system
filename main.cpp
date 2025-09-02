@@ -353,6 +353,12 @@ class Transaction {
         else
             cout << "Error! Invalid borrow date format." << endl;
     }
+     void Transaction::setReturnDate(string date) {
+        if (date.length() >= 6)
+            returnDate = date;
+        else
+            cout << "Error! Invalid return date format." << endl;
+    }
 int main() {
     return 0;
 }
