@@ -384,6 +384,14 @@ class Transaction {
         setReturnDate(rDate);
         setIsReturned(true);
     }
+    void Transaction::display() const {
+        cout << "Transaction Info:" << endl;
+        cout << "Member ID: " << memberID << endl;
+        cout << "Item ID: " << itemID << endl;
+        cout << "Borrow Date: " << borrowDate << endl;
+        cout << "Return Date: " << (isReturned ? returnDate : "Not returned yet") << endl;
+        cout << "Status: " << (isReturned ? "Returned" : "Borrowed") << endl;
+    }
 int main() {
     return 0;
 }
