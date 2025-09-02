@@ -293,6 +293,14 @@ class DVD : public Item {
         cout << "Director: " << director << endl;
         cout << "Duration: " << duration << " minutes" << endl;
     }
+    // class transaction section --------------------------
+class Transaction {
+    private:
+        int memberID;
+        int itemID;
+        string borrowDate;
+        string returnDate;
+        bool isReturned;
 int main() {
     return 0;
 }
