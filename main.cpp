@@ -359,6 +359,9 @@ class Transaction {
         else
             cout << "Error! Invalid return date format." << endl;
     }
+    void Transaction::setIsReturned(bool status) {
+        isReturned = status;
+    }
 int main() {
     return 0;
 }
