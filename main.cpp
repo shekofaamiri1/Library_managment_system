@@ -362,6 +362,13 @@ class Transaction {
     void Transaction::setIsReturned(bool status) {
         isReturned = status;
     }
+      int Transaction::getMemberID() const {
+        return memberID;
+    }
+    
+    int Transaction::getItemID() const {
+        return itemID;
+    }
 int main() {
     return 0;
 }
