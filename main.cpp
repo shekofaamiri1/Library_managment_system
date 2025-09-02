@@ -335,6 +335,12 @@ class Transaction {
         isReturned = false;
         returnDate = "";
     }
+     void Transaction::setMemberID(int id) {
+        if (id >= 0)
+            memberID = id;
+        else
+            cout << "Error! must be non-negative." << endl;
+    }
 int main() {
     return 0;
 }
