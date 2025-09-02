@@ -369,6 +369,13 @@ class Transaction {
     int Transaction::getItemID() const {
         return itemID;
     }
+    string Transaction::getBorrowDate() const {
+        return borrowDate;
+    }
+    
+    string Transaction::getReturnDate() const {
+        return returnDate;
+    }
 int main() {
     return 0;
 }
