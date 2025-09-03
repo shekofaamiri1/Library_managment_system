@@ -492,6 +492,11 @@ void Library::addMember(const Member &m)
 {
     members.push_back(m);
     cout << "Member added successfully." << endl;
+}
+void Library::addItem(Item* item) {
+        items.push_back(item);
+        cout << "Item added successfully." << endl;
+    }
     int main()
     {
         return 0;
