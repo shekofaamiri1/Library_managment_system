@@ -497,6 +497,13 @@ void Library::addItem(Item* item) {
         items.push_back(item);
         cout << "Item added successfully." << endl;
     }
+    Member* Library::findMember(int memberID) {
+        for (auto& m : members) {
+            if (m.getId() == memberID)
+                return &m;
+        }
+        return nullptr;
+    }
     int main()
     {
         return 0;
