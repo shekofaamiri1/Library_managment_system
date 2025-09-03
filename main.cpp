@@ -398,6 +398,23 @@ class Library {
         vector<Member> members;
         vector<Item*> items; 
         vector<Transaction> transactions;
+        public:
+        void addMember(const Member&);
+        void addItem(Item*);
+        void issueItem(int memberID, int itemID, const string& date);
+        void returnItem(int itemID, const string& returnDate);
+        
+        Member* findMember(int memberID);
+        Item* findItem(int itemID);
+        void deleteMember(int);
+        void deleteItem(int );
+        void displayAllMembers() const;
+        void displayAllItems() const;
+        void displayAllTransactions() const;
+    
+        void loadFromFiles();
+        void saveToFiles();
+    };
 int main() {
     return 0;
 }
