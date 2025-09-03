@@ -511,6 +511,34 @@ void Library::addItem(Item* item) {
         }
         return nullptr;
     }
+    void Library::issueItem(int memberID, int itemID, const string& date) {
+        Member* member = findMember(memberID);
+        Item* item = findItem(itemID);
+    
+        if (!member) {
+            cout << "Member not found!" << endl;
+            return;
+        }
+    
+        if (!item) {
+            cout << "Item not found!" << endl;
+            return;
+        }
+    
+        if (!item->getIsAvailable()) {
+            cout << "Item is already borrowed." << endl;
+            return;
+        }
+    
+        item->setIsAvailable(false);
+        member->borrowItem(itemID); 
+    
+        Transaction t(memberID, itemID, date);
+        transactions.push_back(t);
+    
+        cout << "Item issued successfully." << endl;
+    }
+    
     int main()
     {
         return 0;
