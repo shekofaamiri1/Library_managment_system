@@ -504,6 +504,13 @@ void Library::addItem(Item* item) {
         }
         return nullptr;
     }
+    Item* Library::findItem(int itemID) {
+        for (auto& i : items) {
+            if (i->getItemID() == itemID)
+                return i;
+        }
+        return nullptr;
+    }
     int main()
     {
         return 0;
