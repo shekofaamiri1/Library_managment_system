@@ -392,6 +392,12 @@ class Transaction {
         cout << "Return Date: " << (isReturned ? returnDate : "Not returned yet") << endl;
         cout << "Status: " << (isReturned ? "Returned" : "Borrowed") << endl;
     }
+    // class library section -----------------------------------
+class Library {
+    private:
+        vector<Member> members;
+        vector<Item*> items; 
+        vector<Transaction> transactions;
 int main() {
     return 0;
 }
