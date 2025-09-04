@@ -570,7 +570,12 @@ void Library::addItem(Item* item) {
     
         cout << "Item returned successfully." << endl;
     }
-    
+    void Library::displayAllMembers() const {
+        for (const auto& m : members) {
+            m.display();
+            cout << "---------------------" << endl;
+        }
+    }
     int main()
     {
         return 0;
