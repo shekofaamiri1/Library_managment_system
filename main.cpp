@@ -538,6 +538,38 @@ void Library::addItem(Item* item) {
     
         cout << "Item issued successfully." << endl;
     }
+    void Library::returnItem(int itemID, const string& returnDate) {
+        Item* item = findItem(itemID);
+    
+        if (!item) {
+            cout << "Item not found!" << endl;
+            return;
+        }
+    
+        if (item->getIsAvailable()) {
+            cout << "Item is not currently borrowed." << endl;
+            return;
+        }
+    
+        for (auto& t : transactions) {
+            if (t.getItemID() == itemID && !t.getIsReturned()) {
+                t.markReturned(returnDate);
+                break;
+            }
+        }
+    
+        item->setIsAvailable(true); 
+    
+        for (auto& m : members) {
+            auto borrowed = m.getBorrowedItemId();
+            if (find(borrowed.begin(), borrowed.end(), itemID) != borrowed.end()) {
+                m.returnItem(itemID);
+                break;
+            }
+        }
+    
+        cout << "Item returned successfully." << endl;
+    }
     
     int main()
     {
