@@ -576,6 +576,12 @@ void Library::addItem(Item* item) {
             cout << "---------------------" << endl;
         }
     }
+    void Library::displayAllItems() const {
+        for (const auto& i : items) {
+            i->displayInfo();
+            cout << "---------------------" << endl;
+        }
+    }
     int main()
     {
         return 0;
