@@ -582,6 +582,12 @@ void Library::addItem(Item* item) {
             cout << "---------------------" << endl;
         }
     }
+     void Library::displayAllTransactions() const {
+        for (const auto& t : transactions) {
+            t.display();
+            cout << "---------------------" << endl;
+        }
+    }
     int main()
     {
         return 0;
