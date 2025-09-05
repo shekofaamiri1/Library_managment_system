@@ -629,5 +629,12 @@ void showMenu() {
 
     int main()
     {
+    Library lib;
+    int choice;
+
+    do {
+        showMenu();
+        cin >> choice;
+        cin.ignore();
         return 0;
     }
