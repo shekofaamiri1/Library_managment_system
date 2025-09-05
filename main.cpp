@@ -636,5 +636,62 @@ void showMenu() {
         showMenu();
         cin >> choice;
         cin.ignore();
+        switch (choice) {
+            case 1: {
+                string name;
+                int id;
+                cout << "Enter name: ";
+                getline(cin, name);
+                cout << "Enter ID: ";
+                cin >> id;
+                lib.addMember(Member(name, id));
+                break;
+            }
+            case 2: {
+                int itemType;
+                cout << "Select Item Type:\n1. Book\n2. Magazine\n3. DVD\nChoice: ";
+                cin >> itemType;
+                cin.ignore();
+
+                string title;
+                int id;
+                bool avail = true;
+
+                cout << "Enter title: ";
+                getline(cin, title);
+                cout << "Enter item ID: ";
+                cin >> id;
+
+                if (itemType == 1) {
+                    string author, isbn;
+                    cout << "Enter author: ";
+                    cin.ignore();
+                    getline(cin, author);
+                    cout << "Enter ISBN 13 characters: ";
+                    getline(cin, isbn);
+                    lib.addItem(new Book(title, id, avail, author, isbn));
+                } else if (itemType == 2) {
+                    int issue;
+                    string publisher;
+                    cout << "Enter issue number: ";
+                    cin >> issue;
+                    cin.ignore();
+                    cout << "Enter publisher: ";
+                    getline(cin, publisher);
+                    lib.addItem(new Magazine(title, id, avail, issue, publisher));
+                } else if (itemType == 3) {
+                    string director;
+                    float duration;
+                    cout << "Enter director: ";
+                    cin.ignore();
+                    getline(cin, director);
+                    cout << "Enter duration: ";
+                    cin >> duration;
+                    lib.addItem(new DVD(title, id, avail, director, duration));
+                } else {
+                    cout << "Invalid item type." << endl;
+                }
+                break;
+            }
         return 0;
     }
