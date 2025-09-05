@@ -606,6 +606,11 @@ void Library::addItem(Item* item) {
                 delete *i;
                 i = items.erase(i);
                 cout << "Item deleted successfully." << endl;
+                 } else {
+                ++i;
+            }
+        }        
+    }
     int main()
     {
         return 0;
