@@ -611,6 +611,22 @@ void Library::addItem(Item* item) {
             }
         }        
     }
+    // Menu -------------------------------
+void showMenu() {
+    cout << "\n--- Library Menu ---" << endl;
+    cout << "1. Add Member" << endl;
+    cout << "2. Add Item" << endl;
+    cout << "3. Issue Item" << endl;
+    cout << "4. Return Item" << endl;
+    cout << "5. Display All Members" << endl;
+    cout << "6. Display All Items" << endl;
+    cout << "7. Display All Transactions" << endl;
+    cout << "8. Delete Member" << endl;
+    cout << "9. Delete Item" << endl;
+    cout << "10. Exit" << endl;
+    cout << "Choose an option: ";
+}
+
     int main()
     {
         return 0;
