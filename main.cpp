@@ -599,6 +599,8 @@ void Library::addItem(Item* item) {
             cout << "Member not found." << endl;
         }
     }
+    void Library::deleteItem(int itemID) {
+        for (auto i = items.begin(); i != items.end(); )
     int main()
     {
         return 0;
