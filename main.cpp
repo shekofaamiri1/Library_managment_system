@@ -601,6 +601,11 @@ void Library::addItem(Item* item) {
     }
     void Library::deleteItem(int itemID) {
         for (auto i = items.begin(); i != items.end(); )
+        {
+            if ((*i)->getItemID() == itemID) {
+                delete *i;
+                i = items.erase(i);
+                cout << "Item deleted successfully." << endl;
     int main()
     {
         return 0;
