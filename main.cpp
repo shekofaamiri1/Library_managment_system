@@ -592,6 +592,13 @@ void Library::addItem(Item* item) {
         auto it = remove_if(members.begin(), members.end(), [memberID](const Member& m) {
             return m.getId() == memberID;
         });
+          if (it != members.end()) {
+            members.erase(it, members.end());
+            cout << "Member deleted successfully." << endl;
+        } else {
+            cout << "Member not found." << endl;
+        }
+    }
     int main()
     {
         return 0;
