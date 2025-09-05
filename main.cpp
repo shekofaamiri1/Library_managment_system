@@ -726,4 +726,28 @@ void showMenu() {
             case 7:
                 lib.displayAllTransactions();
                 break;
-    }
+                  case 8: {
+                int id;
+                cout << "Enter Member ID to delete: ";
+                cin >> id;
+                lib.deleteMember(id);
+                break;
+            }
+            case 9: {
+                int id;
+                cout << "Enter Item ID to delete: ";
+                cin >> id;
+                lib.deleteItem(id);
+                break;
+            }
+            case 10:
+                cout << "Exiting..." << endl;
+                break;
+            default:
+                cout << "Invalid choice! Try again." << endl;
+        }
+    } while (choice != 10);
+
+    return 0;
+}
+    
