@@ -588,6 +588,10 @@ void Library::addItem(Item* item) {
             cout << "---------------------" << endl;
         }
     }
+    void Library::deleteMember(int memberID) {
+        auto it = remove_if(members.begin(), members.end(), [memberID](const Member& m) {
+            return m.getId() == memberID;
+        });
     int main()
     {
         return 0;
