@@ -693,5 +693,37 @@ void showMenu() {
                 }
                 break;
             }
-        return 0;
+         case 3: {
+                int memberID, itemID;
+                string date;
+                cout << "Enter Member ID: ";
+                cin >> memberID;
+                cout << "Enter Item ID: ";
+                cin >> itemID;
+                cin.ignore();
+                cout << "Enter Borrow Date: ";
+                getline(cin, date);
+                lib.issueItem(memberID, itemID, date);
+                break;
+            }
+            case 4: {
+                int itemID;
+                string returnDate;
+                cout << "Enter Item ID: ";
+                cin >> itemID;
+                cin.ignore();
+                cout << "Enter Return Date: ";
+                getline(cin, returnDate);
+                lib.returnItem(itemID, returnDate);
+                break;
+            }
+            case 5:
+                lib.displayAllMembers();
+                break;
+            case 6:
+                lib.displayAllItems();
+                break;
+            case 7:
+                lib.displayAllTransactions();
+                break;
     }
